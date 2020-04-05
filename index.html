@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<link rel ="stylesheet" href="style.css"/>
+
+</head>
+
+<body >
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="btn btn-info nav-item" class="btn btn-primary">
+            <a class=" active" data-toggle="tab" href="#panel7" role="tab" style="color: white;text-decoration: none;" ><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="btn btn-info nav-item">
+            <a  data-toggle="tab" href="#panel8" role="tab" style="color: white;text-decoration: none; "><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                  <i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="UserHandle" >
+              </div>
+              <br>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock prefix"></i></span>
+                </div>
+                <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">First and last name</span>
+  </div>
+  <input type="text" aria-label="First name" class="form-control">
+  <input type="text" aria-label="Last name" class="form-control">
+</div>
+<br>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">
+    <i class="fas fa-user"></i></span>
+  </div>
+  <input type="text" class="form-control" placeholder="Username" aria-label="UserHandle" >
+</div>
+<br>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock prefix"></i></span>
+  </div>
+  <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock prefix"></i></span>
+  </div>
+  <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+
+
+
+
+
+
+<div class="modal fade" id="personalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+             
+
+<!-- personal detail -->
+<form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Student name</label>
+      <input type="text" class="form-control" id="validationTooltip01" value="Name" required>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationTooltip04">Branch</label>
+      <select class="custom-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>MAE</option>
+      </select>
+      <div class="invalid-tooltip">
+        Please select a valid Branch.
+      </div>
+    </div>
+    <div class="col-md-12 mb-3">
+      <label for="validationTooltipUsername">Phone Number</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="validationTooltipUsernamePrepend">+91</span>
+        </div>
+        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+          Please choose a unique and valid phonenumber.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-12 mb-3">
+      <label for="validationTooltip03">Address</label>
+      <textarea class="form-control"  rows="4" cols="50" required></textarea><br>
+      <div class="invalid-tooltip">
+        Please provide a valid address.
+      </div>
+    </div>
+    
+ 
+    <div class="col-md-12 mb-3">
+      <label for="validationTooltip05">D.O.B</label>
+      <input type="date" class="form-control" id="validationTooltip05" required>
+      <div class="invalid-tooltip">
+        Please provide a valid D.O.B.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>* All Information is will be verified later.</p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+</div></div>
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+
+<div class="modal fade" id="quizForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1" >
+             
+              <div class="container-fluid bg-info">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h3><span class="label label-warning" id="qid">1</span> The latest HTML standard is</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xs-3 col-xs-offset-5">
+                           <div id="loadbar" style="display: none;">
+                              <div class="blockG" id="rotateG_01"></div>
+                              <div class="blockG" id="rotateG_02"></div>
+                              <div class="blockG" id="rotateG_03"></div>
+                              <div class="blockG" id="rotateG_04"></div>
+                              <div class="blockG" id="rotateG_05"></div>
+                              <div class="blockG" id="rotateG_06"></div>
+                              <div class="blockG" id="rotateG_07"></div>
+                              <div class="blockG" id="rotateG_08"></div>
+                          </div>
+                      </div>
+            
+                      <div class="quiz" id="quiz" data-toggle="buttons">
+                       <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">XML</label>
+                       <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">SGML</label>
+                       <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">HTML 4.0</label>
+                       <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">HTML 5.0</label>
+                   </div>
+               </div>
+            </div>
+            </div>
+            </div>
+
+
+
+  
+            <div class="container-fluid bg-info">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                   <div class="modal-header">
+                      <h3><span class="label label-warning" id="qid">2</span> Markup tags tell the web browser</h3>
+                  </div>
+                  <div class="modal-body">
+                      <div class="col-xs-3 col-xs-offset-5">
+                         <div id="loadbar" style="display: none;">
+                            <div class="blockG" id="rotateG_01"></div>
+                            <div class="blockG" id="rotateG_02"></div>
+                            <div class="blockG" id="rotateG_03"></div>
+                            <div class="blockG" id="rotateG_04"></div>
+                            <div class="blockG" id="rotateG_05"></div>
+                            <div class="blockG" id="rotateG_06"></div>
+                            <div class="blockG" id="rotateG_07"></div>
+                            <div class="blockG" id="rotateG_08"></div>
+                        </div>
+                    </div>
+          
+                    <div class="quiz" id="quiz" data-toggle="buttons">
+                     <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">How to organise the page</label>
+                     <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">How to display the page</label>
+                     <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">How to display message box on page</label>
+                     <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">None of these</label>
+                 </div>
+             </div>
+          </div>
+          </div>
+          </div>
+
+  
+          <div class="container-fluid bg-info">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                 <div class="modal-header">
+                    <h3><span class="label label-warning" id="qid">3</span> www is based on which model?</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xs-3 col-xs-offset-5">
+                       <div id="loadbar" style="display: none;">
+                          <div class="blockG" id="rotateG_01"></div>
+                          <div class="blockG" id="rotateG_02"></div>
+                          <div class="blockG" id="rotateG_03"></div>
+                          <div class="blockG" id="rotateG_04"></div>
+                          <div class="blockG" id="rotateG_05"></div>
+                          <div class="blockG" id="rotateG_06"></div>
+                          <div class="blockG" id="rotateG_07"></div>
+                          <div class="blockG" id="rotateG_08"></div>
+                      </div>
+                  </div>
+        
+                  <div class="quiz" id="quiz" data-toggle="buttons">
+                   <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">Local-server</label>
+                   <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">Client-server</label>
+                   <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">3-tier</label>
+                   <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">None of these</label>
+               </div>
+           </div>
+        </div>
+        </div>
+        </div>
+
+
+
+          
+        <div class="container-fluid bg-info">
+          <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h3><span class="label label-warning" id="qid">2</span>  
+                    What are Empty elements and is it valid?</h3>     
+                         </div>
+              <div class="modal-body">
+                  <div class="col-xs-3 col-xs-offset-5">
+                     <div id="loadbar" style="display: none;">
+                        <div class="blockG" id="rotateG_01"></div>
+                        <div class="blockG" id="rotateG_02"></div>
+                        <div class="blockG" id="rotateG_03"></div>
+                        <div class="blockG" id="rotateG_04"></div>
+                        <div class="blockG" id="rotateG_05"></div>
+                        <div class="blockG" id="rotateG_06"></div>
+                        <div class="blockG" id="rotateG_07"></div>
+                        <div class="blockG" id="rotateG_08"></div>
+                    </div>
+                </div>
+      
+                <div class="quiz" id="quiz" data-toggle="buttons">
+                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">No, there is no such terms as Empty Element</label>
+                 <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">Empty elements are element with no data</label>
+                 <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">No, it is not valid to use Empty Element</label>
+                 <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">None of These</label>
+             </div>
+         </div>
+      </div>
+      </div>
+      </div>
+
+
+        
+      <div class="container-fluid bg-info">
+        <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h3><span class="label label-warning" id="qid">5</span>  
+                  Which of the following attributes of text box control allow to limit the maximum character?</h3>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-3 col-xs-offset-5">
+                   <div id="loadbar" style="display: none;">
+                      <div class="blockG" id="rotateG_01"></div>
+                      <div class="blockG" id="rotateG_02"></div>
+                      <div class="blockG" id="rotateG_03"></div>
+                      <div class="blockG" id="rotateG_04"></div>
+                      <div class="blockG" id="rotateG_05"></div>
+                      <div class="blockG" id="rotateG_06"></div>
+                      <div class="blockG" id="rotateG_07"></div>
+                      <div class="blockG" id="rotateG_08"></div>
+                  </div>
+              </div>
+    
+              <div class="quiz" id="quiz" data-toggle="buttons">
+               <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">Size</label>
+               <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">Len</label>
+               <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">Maxlength</label>
+               <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">None of these</label>
+           </div>
+       </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+            
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>* This Test contain total 5 Marks</p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+</div></div>
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+
+
+<div class="modal fade" id="feedbackForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="input-group mb-3">
+               
+                  <h3>1. Did we meet your expectations?</h3>
+                
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">No</label>
+                </div>
+              </div>
+              <br>
+              
+              <div class="input-group mb-3">
+                
+                  <h3>2. How would you rate your interaction with our employees? </h3>
+               
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Positive</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">Negative</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">Neutral</label>
+                </div>
+              </div>
+              <br>
+              
+              <div class="input-group mb-3">
+               
+                  <h3>3. Was it easy to find what you were looking for?</h3>
+               
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">No</label>
+                </div>
+              </div>
+              <br>
+              
+              <div class="input-group mb-3">
+               
+                  <h3>4. Was it easy to purchase your item or service?</h3>
+                
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">No</label>
+                </div>
+              </div>
+              <br>
+              
+              <div class="col-md-12 mb-3">
+                
+                  <h3>5. Were we able to satisfy your need?</h3>
+                
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">No</label>
+                </div>
+              </div>
+              <br>
+              
+              <div class="col-md-12 mb-3">
+                
+                  <h3>6. Did we have the selection you were looking for?</h3>
+                
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">No</label>
+                </div>
+              </div>
+              <br>
+              
+              
+                <div class="col-md-12 mb-3">
+                  
+                  <h3>7. Did you feel comfortable shopping with us?</h3>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">No</label>
+                </div>
+              
+              <br>
+              
+              
+                
+                <div class="col-md-12 mb-3">
+                  <label for="validationTooltip03">8. What is the reason you shop/dine/purchase from us?</label>
+                  <textarea class="form-control"  rows="4" cols="50" required></textarea><br>
+                  <div class="invalid-tooltip">
+                    This Field is required.
+                  </div>
+                </div>
+              
+              <br>
+              <div class="col-md-12 mb-3">
+                <label for="validationTooltip03">9. What products or services do you wish we carried?</label>
+                <textarea class="form-control"  rows="4" cols="50" required></textarea><br>
+                <div class="invalid-tooltip">
+                  This Field is required.
+                </div>
+              </div>
+            
+            <br>
+
+            <div class="col-md-12 mb-3">
+              <label for="validationTooltip03">10. Is there anything else you would like us to know about your experience?</label>
+              <textarea class="form-control"  rows="4" cols="50" required></textarea><br>
+              <div class="invalid-tooltip">
+                This Field is required.
+              </div>
+            </div>
+          
+          <br>
+
+
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+
+
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+</div></div>
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+
+
+<div class="modal fade" id="surveyForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+             
+
+<!-- personal detail -->
+<form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Student name</label>
+      <input type="text" class="form-control" id="validationTooltip01" value="Name" required>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationTooltip04">Branch</label>
+      <select class="custom-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>MAE</option>
+      </select>
+      <div class="invalid-tooltip">
+        Please select a valid Branch.
+      </div>
+    </div>
+
+
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Satisfied</th>
+          <th scope="col">Neutral</th>
+          <th scope="col">Unsatisfied</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Location</th>
+          <td><input type="radio" name="location"/></td>
+          <td><input type="radio" name="location"/></td>
+          <td><input type="radio" name="location"/></td>
+        </tr>
+        <tr>
+          <th scope="row">Content</th>
+          <td><input type="radio" name="content"/></td>
+          <td><input type="radio" name="content"/></td>
+          <td><input type="radio" name="content"/></td>
+        </tr>
+        <tr>
+          <th scope="row">Organization</th>
+          <td><input type="radio" name="organization"/></td>
+          <td><input type="radio" name="organization"/></td>
+          <td><input type="radio" name="organization"/></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="col-md-12 mb-3">
+      <label for="validationTooltip03">How can we improve this form</label>
+      <textarea class="form-control"  rows="4" cols="50" required></textarea><br>
+      <div class="invalid-tooltip">
+        This Field is required.
+      </div>
+    </div>
+  
+  <br>
+
+
+
+
+
+
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>* Thanks for providing us your valuable time.</p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+</div></div>
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="blurred-box">
+  <!-- MAIN PAGE BOX-->
+  <div class="user-login-box">
+    <span class="user-icon"></span><br>
+    <h3 class="text-center" style="color:white">Vishal Sharma</h3>
+    <br>
+    <div class="text-center" class="btn btn-primary">
+      <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm" style="color:white">LogIn/Register</a>
+    </div>
+    
+    <div class="text-center" class="btn btn-primary">
+      <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#personalForm" style="color:white">Student Info</a>
+    </div>
+    
+    <div class="text-center" class="btn btn-primary">
+      <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#quizForm" style="color:white">MCQ Quiz</a>
+    </div>
+    <div class="text-center" class="btn btn-primary">
+      <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#feedbackForm" style="color:white">FeedBack Form</a>
+    </div>
+
+    <div class="text-center" class="btn btn-primary">
+      <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#surveyForm" style="color:white">Survey Form</a>
+    </div>
+
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
