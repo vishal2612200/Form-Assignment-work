@@ -3,7 +3,7 @@ var attempt = 3; // Variable to count number of attempts.
 function ValidateEmail(inputText)
 {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(inputText.value.match(mailformat))
+    if(inputText.match(mailformat))
     {
         document.getElementById("email").focus();
         return true;
@@ -26,7 +26,7 @@ To check a password
 function CheckPassword(inputtxt) 
 { 
     var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    if(inputtxt.value.match(passw)) 
+    if(inputtxt.match(passw)) 
     { 
         alert('Correct, try another...')
         return true;
@@ -46,6 +46,23 @@ function validateForm(email,password) {
       return false;
     }
   } 
+
+// Function to validate number field
+  function validatenumeric(inputtxt)
+  { 
+    var letters = /^[a-zA-Z]+$/;
+    if(inputtxt.match(letters))
+    {
+        alert('Please input number only');
+        document.form1.text1.focus();
+        return false;
+    }
+    else
+   {
+        
+        return true;
+    }
+  }
 
 
 function validate(){
